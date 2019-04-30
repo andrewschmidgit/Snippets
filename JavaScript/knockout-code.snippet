@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://knockoutjs.com/documentation/introduction.html">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ko.Observable</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a knockout observable</Description>
+            <Shortcut>koo</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ObservableName</ID>
+                    <Default>Observable</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[self.$ObservableName$ = ko.observable($InitialValue$);$final$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ko.ObservableArray</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a knockout observable array</Description>
+            <Shortcut>koa</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ObservableArrayName</ID>
+                    <Default>ObservableArray</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[self.$ObservableArrayName$ = ko.observableArray([]);$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Function in a Mvvm</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a function as a property of self</Description>
+            <Shortcut>kof</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>FunctionName</ID>
+                    <Default>Function</Default>
+                </Literal>
+                <Literal>
+                    <ID>Parameters</ID>
+                    <Default>params</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[self.$FunctionName$ = function($Parameters$) {
+                    $end$
+                };]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ko.Computed</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a knockout computed</Description>
+            <Shortcut>koc</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ComputedName</ID>
+                    <Default>Computed</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[self.$ComputedName$ = ko.computed(function() {
+                    $end$
+                });]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ko.PureComputed</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a knockout pure computed function</Description>
+            <Shortcut>kop</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>PureComputedName</ID>
+                    <Default>PureComputed</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[self.$PureComputedName$ = ko.pureComputed(function() {
+                    $end$
+                });]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

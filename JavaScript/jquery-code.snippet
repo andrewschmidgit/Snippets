@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets  
+    xmlns="http://knockoutjs.com/documentation/introduction.html">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>$.get</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a get based on jQuery</Description>
+            <Shortcut>jget</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>Url</ID>
+                    <Default>url</Default>
+                </Literal>
+                <Literal>
+                    <ID>DataToSend</ID>
+                    <Default>urlParams</Default>
+                </Literal>
+                <Literal>
+                    <ID>DataReceived</ID>
+                    <Default>data</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[$$.get(
+                    $Url$,
+                    $DataToSend$,
+                    function($DataReceived$) {
+                        $end$
+                    }
+                );]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
