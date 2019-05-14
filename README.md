@@ -19,4 +19,4 @@ TODO
 
 ## Acknowledgments
 
-* [MSDN](https://docs.microsoft.com/en-us/visualstudio/ide/code-snippets?view=vs-2019)
+* [MSDN](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2019)
