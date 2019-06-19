@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>tryres--Try catch with results</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tryres</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Exception</ID>
+          <ToolTip>What type of exception</ToolTip>
+          <Default>Exception</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>results</ID>
+          <ToolTip>The CvmLib.DataModel.Results variable name for the function.</ToolTip>
+          <Default>results</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[try
+            {
+				$end$
+            }
+            catch ($Exception$ e)
+            {
+                var curException = e;
+
+                do
+                {
+                    if(curException.Message.ToLower().Contains("see the inner exception") == false)
+                        $results$.AddError(curException.Message);
+
+                    curException = curException.InnerException;
+
+                } while (curException != null);
+
+            }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
