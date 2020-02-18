@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets  
+    xmlns="http://knockoutjs.com/documentation/introduction.html">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ApiCalls</Title>
+            <Author>Andrew Schmid</Author>
+            <Description>Generates a Singleton dictionary of Urls for the page MVVM.</Description>
+            <Shortcut>japi</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>Key</ID>
+                    <Default>Load</Default>
+                </Literal>
+                <Literal>
+                    <ID>Action</ID>
+                    <Default>Action</Default>
+                </Literal>
+                <Literal>
+                    <ID>Controller</ID>
+                    <Default>Controller</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="JavaScript">
+                <![CDATA[var ApiCalls = (function () {
+    var instance = null;
+
+    function CreateInstance() {
+
+        var apiUrls = {};
+        apiUrls["$Key$"] = "@Url.Action("$Action$", "$Controller$")";
+
+        return apiUrls;
+    }
+
+    return {
+        GetInstance: function () {
+            if (instance === null)
+                instance = CreateInstance();
+
+            return instance;
+        }
+    };
+})();]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

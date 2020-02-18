@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>act--typical controller action</Title>
+      <Author>
+      </Author>
+      <Description>
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>act</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>The name for the action.</ToolTip>
+          <Default>GetDetails</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>paramType</ID>
+          <ToolTip>URL parameter type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>paramName</ID>
+          <ToolTip>URL parameter name</ToolTip>
+          <Default>userId</Default>
+        </Literal>
+      </Declarations>
+      <Code>
+        <![CDATA[public async Task<JsonResult> $name$($paramType$ $paramName$) {
+          $end$
+
+          return Json(new {}, JsonRequestBehavior.AllowGet);
+        }]]>      
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
